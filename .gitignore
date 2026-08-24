@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# API 키
+.env
+.env.local
+.vercel
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

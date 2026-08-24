@@ -1,111 +1,92 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+/* 디자인 값 모음. 색·크기를 바꿀 일이 있으면 여기만 고친다.
+   helply-expo 의 src/lib/theme.js 를 CSS 변수로 옮긴 것. */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+/* 헬플리 앱과 같은 폰트 */
+@font-face {
+  font-family: 'AstaSans';
+  src: url('/fonts/AstaSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AstaSans';
+  src: url('/fonts/AstaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+:root {
+  /* 배경 */
+  --bg: #E3ECFF;
+  --bg-2: #DFE2F7;
+  --bg-3: #FFF1D6;
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+  /* 카드 */
+  --card: #FFFFFF;
+  --card-alt: #F5F5F5;
+  --card-gray: #ECEFF5;
+
+  /* 글자 */
+  --text: #1B1A18;
+  --text-sub: #504D49;
+  --border: #D5DDE8;
+
+  /* 주 버튼 */
+  --primary: #428A67;
+  --primary-text: #FFFFFF;
+
+  /* 이동 버튼 */
+  --navigate: #3E629F;
+  --navigate-text: #FFFFFF;
+
+  /* 비활성 버튼 */
+  --disabled: #CFCCC9;
+  --disabled-text: #504D49;
+
+  /* 포인트 색 (칩) */
+  --chip-blue: #DCE7FF;
+  --chip-green: #DDEEE5;
+  --chip-yellow: #FFF1D6;
+  --chip-purple: #F3E4F7;
+  --chip-pink: #FFE3E0;
+  --gold: #FABF4D;
+
+  /* 글자 크기 */
+  --font-title: 24px;
+  --font-sub-title: 20px;
+  --font-card-title: 18px;
+  --font-body: 16px;
+  --font-subbody: 14px;
+  --font-caption: 13px;
+
+  /* 여백 */
+  --space-screen: 20px;
+  --space-card: 16px;
+  --space-gap: 12px;
+
+  /* 모서리 */
+  --radius-card: 25px;
+  --radius-button: 15px;
+  --radius-input: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
 }
 
 body {
   margin: 0;
-}
+  color: var(--text);
+  font-family: 'AstaSans', system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  font-size: var(--font-body);
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  /* 헬플리 배경: 단색 대신 그라데이션 */
+  background: linear-gradient(170deg, var(--bg) 0%, var(--bg-2) 55%, var(--bg-3) 100%);
+  background-attachment: fixed;
 }

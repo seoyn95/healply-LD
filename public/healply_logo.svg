@@ -1,0 +1,17 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="healply">
+<g clip-path="url(#clip0_499_8)">
+<path d="M42.3529 0H17.6471C7.90086 0 0 7.90086 0 17.6471V42.3529C0 52.0991 7.90086 60 17.6471 60H42.3529C52.0991 60 60 52.0991 60 42.3529V17.6471C60 7.90086 52.0991 0 42.3529 0Z" fill="url(#paint0_linear_499_8)"/>
+<path d="M17.6471 15.8824V44.1176M38.8235 15.8824V44.1176M17.6471 30H38.8235" stroke="#F3F6FD" stroke-width="5.29412" stroke-linecap="round"/>
+<path d="M40.8529 16.7503C43.8915 14.996 45.4461 12.0001 44.3253 10.0588C43.2045 8.11749 39.8327 7.96591 36.7941 9.72023C33.7555 11.4745 32.2009 14.4704 33.3217 16.4117C34.4425 18.353 37.8144 18.5046 40.8529 16.7503Z" fill="#8FDBAE"/>
+<path d="M41.9202 14.1399C44.7468 15.4579 47.706 15.0943 48.5298 13.3277C49.3535 11.5611 47.73 9.06047 44.9034 7.74241C42.0768 6.42436 39.1176 6.78799 38.2938 8.5546C37.47 10.3212 39.0936 12.8218 41.9202 14.1399Z" fill="#6FCF97"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_499_8" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4E76B8"/>
+<stop offset="1" stop-color="#2E4E80"/>
+</linearGradient>
+<clipPath id="clip0_499_8">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>
