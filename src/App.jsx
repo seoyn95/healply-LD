@@ -62,7 +62,6 @@ export default function App() {
     }, SPIN_TICK_MS)
 
     // 별명을 기다리는 동안 룰렛이 돈다.
-    // 응답이 빨리 와도 SPIN_MS 만큼은 돌려야 뽑는 맛이 난다.
     const [named] = await Promise.all([askNickname(log.trim()), wait(SPIN_MS)])
 
     clearInterval(spinner.current)
@@ -83,7 +82,7 @@ export default function App() {
     <div className="page">
       <header className="header">
         <img className="logo" src="/healply_logo.svg" alt="healply" />
-        <span className="brand">healply</span>
+        <span className="brand">HEALPLY</span>
         <span className="brand-sub">LUCKY DRAW</span>
       </header>
 
