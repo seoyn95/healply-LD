@@ -9,7 +9,7 @@ export const PRIZES = [
     desc: '오늘의 한 타를 더 기분 좋게',
     image: '/prize/keycap.png',
     color: 'var(--chip-purple)',
-    weight: 5,
+    weight: 0,
   },
   {
     id: 'snack',
